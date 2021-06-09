@@ -18,7 +18,6 @@ exit
 }
 
 
-
 ##opens $wordlist, then reads the list--reading each line individually as an item
 ##if theres empty lines in a list it will count that as an item in the list
 set wlo [open "$wordlist"]
