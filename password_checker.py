@@ -1,6 +1,3 @@
-
-
-
 def check_P(password):
 #checking length
 	if len(password)<8:
@@ -50,7 +47,8 @@ def check_list(passw):
 	if n==0:
 		print(u"\N{heavy check mark}| "+"Secure pass---not found in wordlist")
 
-print ("\\\\\\A password complexity checker, also compares it against a workdlist (like rockyou.txt)//////")
+print ("\\\\\\\\\\\\\A password complexity checker, also compares it against a workdlist (like rockyou.txt)///////")
+print("-----------------------------------------------------------------------------------------------------------------")
 passw=input("~~~Please enter password: ")
 wordlst=input("~~~Please enter wordlist path: ")
 #keep looping searching for new passwords until user wants to stop
