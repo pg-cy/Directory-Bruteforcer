@@ -34,7 +34,7 @@ def check_list(passw):
 #open file, then read all lines as one (as one list)...notice the 'readlines' plural. (ables us to get length(len) of list)
 	l = open(wordlst, "r",encoding="latin1")
 	length_list = len(l.readlines())
-
+	l.close()
 #reopen file to read each line separately, the "r" means 'read' (mode-type)
 	f=open(wordlst,"r",encoding="latin-1")
 	n=0	
@@ -43,6 +43,7 @@ def check_list(passw):
 		if passw==line:		#finding if password is in wordlist
 			print (u"\N{cross mark}| "+"Not secure!---pass found in wordlist")
 			n+=1
+			f.close()
 			break
 	if n==0:
 		print(u"\N{heavy check mark}| "+"Secure pass---not found in wordlist")
@@ -50,7 +51,7 @@ def check_list(passw):
 print ("\\\\\\\\\\\\\A password complexity checker, also compares it against a workdlist (like rockyou.txt)///////")
 print("-----------------------------------------------------------------------------------------------------------------")
 passw=input("~~~Please enter password: ")
-wordlst=input("~~~Please enter wordlist path: ")
+wordlst=input("~~~Please enter wordlist path: ").strip()
 #keep looping searching for new passwords until user wants to stop
 x="y"
 while x=="y":
