@@ -39,7 +39,7 @@ def check_list(passw):
 	f=open(wordlst,"r",encoding="latin-1")
 	n=0	
 	for x in range (length_list):
-		line = f.readline().strip()  #remove all spaces/tabs in each line .strip (if theres empty lines already in list it still prints empty)	
+		line = f.readline().strip()  #remove all white spaces in each line .strip
 		if passw==line:		#finding if password is in wordlist
 			print (u"\N{cross mark}| "+"Not secure!---pass found in wordlist")
 			n+=1
